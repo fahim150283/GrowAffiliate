@@ -15,7 +15,6 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Random;
-import java.util.concurrent.TimeUnit;
 
 public class Page_Options extends BrowserUtils {
     public static String id;
@@ -260,51 +259,18 @@ public class Page_Options extends BrowserUtils {
         return value;
     }
 
-    public static void Login_AIR(String username) {
+    public static void Login(String username) {
 
-        navigatetourl(Users.AIR);
+        navigatetourl(Signup.url);
         id = "username";
         inputbyid(id, username);
         id = "password";
-        inputbyid(id, String.valueOf(Users.password));
+        inputbyid(id, String.valueOf(Signup.password));
         id = "login";
         clickbyId(id);
     }
 
-    public static void Login_AIR2(String username) throws InterruptedException {
 
-        navigatetourl(Users.AIR_2);
-        id = "username";
-        inputbyid(id, username);
-        id = "password";
-        inputbyid(id, String.valueOf(Users.password));
-        id = "login";
-        clickbyId(id);
-        Thread.sleep(1000);
-    }
-
-    public static void Login_BPU(String username) throws InterruptedException {
-
-        navigatetourl(Users.BPU);
-        id = "username";
-        inputbyid(id, username);
-        id = "password";
-        inputbyid(id, String.valueOf(Users.password));
-        id = "login";
-        clickbyId(id);
-        Thread.sleep(1000);
-    }
-
-    public static void Login_AIR2_AIR(String username) {
-
-        navigatetourl(Users.AIR_2_AIR);
-        id = "username";
-        inputbyid(id, username);
-        id = "password";
-        inputbyid(id, String.valueOf(Users.password));
-        id = "login";
-        clickbyId(id);
-    }
 
     public static String randomTestString() {
         // Create a Random object

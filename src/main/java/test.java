@@ -25,26 +25,12 @@ public class test extends Page_Options {
     public void huhu() {
         try {
             System.out.println("this is expected");
+            System.out.println(Signup.url);
             softAssert.assertAll();
         } catch (AssertionError | TimeoutException e) {
             // Handle the TimeoutException
             System.out.println("TimeoutException occurred: " + e.getMessage());
             throw e;
         }
-    }
-
-    @Test
-    public void tata() throws InterruptedException {
-        int j = randomnumber();
-        String Store_type_name = StoreType.FullName + j;
-        for (int i = 0; i < 5; i++) {
-
-            System.out.println(Store_type_name);
-        }
-    }
-
-    @Test
-    public void tatat() throws InterruptedException {
-
     }
 }
