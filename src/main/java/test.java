@@ -21,16 +21,10 @@ public class test extends Page_Options {
         closedriver();
     }
 
-    @Given("huhu")
-    public void huhu() {
-        try {
-            System.out.println("this is expected");
-            System.out.println(Signup.url);
-            softAssert.assertAll();
-        } catch (AssertionError | TimeoutException e) {
-            // Handle the TimeoutException
-            System.out.println("TimeoutException occurred: " + e.getMessage());
-            throw e;
-        }
-    }
+
+//    @Given("huhu")
+//    public void huhu() {
+//        System.out.println("this is expected");
+//        System.out.println(Signup.url);
+//    }
 }
